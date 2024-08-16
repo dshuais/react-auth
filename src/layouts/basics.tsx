@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-08-16 21:09:54
  * @LastEditors: dushuai
- * @LastEditTime: 2024-08-16 22:55:55
+ * @LastEditTime: 2024-08-16 23:02:58
  * @description: BasicsLayouts
  */
 
@@ -44,11 +44,14 @@ function AuthStatus() {
     return <p>You are not logged in.</p>;
   }
 
-  const isLoggingOut = fetcher.formData != null;
+  function loginout() {
+    fetcher.submit(null, { action: '/logout', method: 'post' });
+  }
 
   return (
-    <fetcher.Form method="post" action="/logout">
-      <button type="submit" disabled={isLoggingOut}>{isLoggingOut ? 'Signing out...' : 'Sign out'}</button>
-    </fetcher.Form>
+    // <fetcher.Form method="post" action="/logout">
+    //   <button type="submit" disabled={isLoggingOut}>{isLoggingOut ? 'Signing out...' : 'Sign out'}</button>
+    // </fetcher.Form>
+    <button onClick={loginout}>sign out</button>
   );
 }
