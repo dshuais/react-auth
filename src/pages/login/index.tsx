@@ -46,7 +46,7 @@ export default function Login() {
   const submit = useSubmit();
 
   function login() {
-    submit({ username: 'ds' }, { method: 'post', replace: true });
+    submit({ username: 'ds', redirectTo: from }, { method: 'post', replace: true });
   }
 
   return (
