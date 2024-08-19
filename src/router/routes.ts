@@ -18,10 +18,7 @@ const BasicsLayout = lazy(() => import('@/layouts/basics'));
 const root: RouteObject[] = [
   {
     index: true,
-    loader: () => {
-      console.log('loader');
-      return null;
-    },
+    loader: ProtectedLoader,
     Component: lazy(() => import('@/pages/home'))
   },
   {
@@ -60,3 +57,7 @@ const routes: RouteObject[] = [
 ];
 
 export default routes;
+
+export function createRouter() {
+
+}
