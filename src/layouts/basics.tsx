@@ -13,6 +13,13 @@ export type AuthStatus = {
 }
 
 export default function BasicsLayouts() {
+
+  const fetcher = useFetcher();
+
+  function loginout() {
+    fetcher.submit(null, { action: '/logout', method: 'post' });
+  }
+
   return (
     <div>
       BasicsLayouts
@@ -27,7 +34,8 @@ export default function BasicsLayouts() {
 
       <Outlet />
 
-      <AuthStatus />
+      {/* <AuthStatus /> */}
+      <button onClick={loginout}>sign out</button>
     </div>
   );
 }
