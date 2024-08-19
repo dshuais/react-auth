@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-08-16 21:11:56
  * @LastEditors: dushuai
- * @LastEditTime: 2024-08-16 22:59:50
+ * @LastEditTime: 2024-08-19 21:16:54
  * @description: 心平气和
  */
 import { lazy } from 'react';
@@ -10,8 +10,7 @@ import { redirect, RouteObject } from 'react-router-dom';
 
 import { type AuthStatus } from '@/layouts/basics';
 import { useAppStore } from '@/store';
-import { ProtectedLoader, LoginLoader } from '@/hooks/useLoader';
-import { LoginAction } from '@/hooks/useAction';
+import { ProtectedLoader, LoginLoader, LoginAction } from '@/permission';
 
 const BasicsLayout = lazy(() => import('@/layouts/basics'));
 
